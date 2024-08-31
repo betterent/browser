@@ -31,13 +31,12 @@ function updateBanner() {
 
   // Save the new URL to Firefox storage
   browser.storage.sync.set({ newImageUrl: newImageUrl }).then(function () {
-    // Force change banner image URL
-
     // Send a message to the background script to update the redirect rule
     browser.runtime.sendMessage(
       { action: "updateRedirect", url: newImageUrl },
       function (response) {
         console.log(response.status);
+        // Force change banner image URL
         banner.children[0].src = response.imageUrl;
       }
     );
@@ -47,6 +46,7 @@ function updateBanner() {
 // Add event listener to the button
 bannerButton.addEventListener("click", updateBanner);
 
+// Add event listener to the input and dynamically set the button's text
 bannerInput.addEventListener("input", function () {
   if (bannerInput.value == "") {
     bannerButton.textContent = "Reset";
