@@ -1,0 +1,47 @@
+.visuel_ent_um img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.my_ent_banner_div {
+  opacity: 0%;
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+}
+
+.my_ent_banner_div:hover {
+  opacity: 100%;
+}
+
+.my_ent_banner_input {
+  padding: 0.5em 1em;
+  background-color: rgb(0 0 0 / 75%);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  margin-right: 0.5em;
+}
+
+.my_ent_banner_input:hover {
+  background-color: rgb(0 0 0 / 100%);
+}
+
+.my_ent_banner_input:focus,
+.my_ent_banner_button:focus {
+  outline: 0.2em solid rgb(0 0 0 / 50%);
+}
+
+.my_ent_banner_button {
+  padding: 0.5em 1em;
+  background-color: rgb(0 0 0 / 75%);
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.my_ent_banner_button:hover {
+  background-color: rgb(0 0 0 / 100%);
+}
